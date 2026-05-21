@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no' name='viewport' />
+    <meta name="description" content="Modern Habit Tracker App to build better routines and stay productive every day." />
+    <meta name="keywords" content="habit tracker, productivity, routine, goals, bootstrap app" />
+    <meta name="author" content="Habit Tracker" />
+
+    <title>Habit Tracker</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-light" style="font-family: 'Inter', sans-serif;">
+
+    <!-- Header -->
+    <header class="border-bottom bg-white sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-light container py-3">
+            <a class="navbar-brand fw-bold" href="#">
+                <i class="fa-solid fa-check-circle text-primary me-2"></i>
+                Habit Tracker
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Habits</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Progress</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="btn btn-primary rounded-pill px-4" href="#">
+                            Start Tracking
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row align-items-center g-4">
+
+                <div class="col-lg-6">
+                    <span class="badge bg-primary-subtle text-primary px-3 py-2 rounded-pill mb-3">
+                        Build Better Habits
+                    </span>
+
+                    <h1 class="display-5 fw-bold mb-3">
+                        Track Your Daily Habits Easily
+                    </h1>
+
+                    <p class="text-secondary fs-5 mb-4">
+                        Stay productive, improve consistency, and build positive routines with a modern and simple habit tracking dashboard.
+                    </p>
+
+                    <div class="d-flex flex-wrap gap-3">
+                        <button class="btn btn-primary btn-lg rounded-pill px-4">
+                            <i class="fa-solid fa-plus me-2"></i>
+                            Add Habit
+                        </button>
+
+                        <button class="btn btn-outline-dark btn-lg rounded-pill px-4">
+                            <i class="fa-solid fa-chart-line me-2"></i>
+                            View Progress
+                        </button>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm rounded-4 bg-white">
+                        <div class="card-body p-4">
+
+                            <div class="container mb-4">
+                                <div>
+                                    <h5 class="fw-bold mb-1">Today's Habits</h5>
+                                    <small class="text-secondary">Stay consistent every day</small>
+                                </div>
+
+                                <div class="bg-light rounded-circle d-flex align-items-center justify-content-center"
+                                     style="width:50px;height:50px;">
+                                    <i class="fa-solid fa-fire text-danger"></i>
+                                </div>
+                            </div>
+
+                            <div class="container border rounded-3 p-3 mb-3">
+                                <div>
+                                    <h6 class="mb-1 fw-semibold">Drink Water</h6>
+                                    <small class="text-secondary">8 glasses target</small>
+                                </div>
+
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" checked>
+                                </div>
+                            </div>
+
+                            <div class="container border rounded-3 p-3 mb-3">
+                                <div>
+                                    <h6 class="mb-1 fw-semibold">Morning Exercise</h6>
+                                    <small class="text-secondary">30 minutes</small>
+                                </div>
+
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox">
+                                </div>
+                            </div>
+
+                            <div class="container border rounded-3 p-3">
+                                <div>
+                                    <h6 class="mb-1 fw-semibold">Read Books</h6>
+                                    <small class="text-secondary">20 pages</small>
+                                </div>
+
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" checked>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Description -->
+    <section class="pb-5">
+        <div class="container">
+            <div class="row g-4">
+
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm rounded-4 h-100 bg-white">
+                        <div class="card-body p-4">
+                            <div class="mb-3">
+                                <i class="fa-solid fa-calendar-check fa-2x text-primary"></i>
+                            </div>
+
+                            <h5 class="fw-bold">Daily Tracking</h5>
+
+                            <p class="text-secondary mb-0">
+                                Monitor your habits every day with a clean and simple interface.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm rounded-4 h-100 bg-white">
+                        <div class="card-body p-4">
+                            <div class="mb-3">
+                                <i class="fa-solid fa-chart-pie fa-2x text-primary"></i>
+                            </div>
+
+                            <h5 class="fw-bold">Progress Analytics</h5>
+
+                            <p class="text-secondary mb-0">
+                                Visualize your progress and stay motivated to achieve your goals.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm rounded-4 h-100 bg-white">
+                        <div class="card-body p-4">
+                            <div class="mb-3">
+                                <i class="fa-solid fa-bolt fa-2x text-primary"></i>
+                            </div>
+
+                            <h5 class="fw-bold">Boost Productivity</h5>
+
+                            <p class="text-secondary mb-0">
+                                Build strong routines and improve consistency in your daily life.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Advertisement Area -->
+    <section class="pb-5">
+        <div class="container">
+            <div class="card border-0 shadow-sm rounded-4 bg-white">
+                <div class="card-body text-center py-5">
+                    <span class="badge bg-secondary mb-3">Advertisement</span>
+
+                    <h4 class="fw-bold mb-2">
+                        Your Ad Banner Here
+                    </h4>
+
+                    <p class="text-secondary mb-0">
+                        728 x 90 Responsive Advertising Space
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-top py-4">
+        <div class="container">
+            <div class="d-flex flex-column flex-lg-row justify-content-between align-items-center gap-3">
+
+                <div>
+                    <h6 class="fw-bold mb-1">
+                        <i class="fa-solid fa-check-circle text-primary me-2"></i>
+                        Habit Tracker
+                    </h6>
+
+                    <small class="text-secondary">
+                        Build better routines every day.
+                    </small>
+                </div>
+
+                <div class="d-flex gap-3">
+                    <a href="#" class="text-secondary">
+                        <i class="fa-brands fa-facebook fa-lg"></i>
+                    </a>
+
+                    <a href="#" class="text-secondary">
+                        <i class="fa-brands fa-instagram fa-lg"></i>
+                    </a>
+
+                    <a href="#" class="text-secondary">
+                        <i class="fa-brands fa-twitter fa-lg"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom Script -->
+    <script>
+        document.querySelectorAll('.form-check-input').forEach(item => {
+            item.addEventListener('change', function() {
+                if (this.checked) {
+                    console.log('Habit completed');
+                } else {
+                    console.log('Habit unchecked');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

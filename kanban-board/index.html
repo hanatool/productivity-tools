@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no' name='viewport' />
+  <meta name="description" content="Modern Minimalist Kanban Board" />
+  <meta name="keywords" content="kanban, task manager, productivity, bootstrap kanban board" />
+  <meta name="author" content="OpenAI" />
+
+  <title>Modern Kanban Board</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+</head>
+<body class="bg-light text-dark">
+
+  <!-- Header -->
+  <header class="border-bottom bg-white shadow-none sticky-top">
+    <div class="container py-3 container">
+      <div class="d-flex align-items-center gap-2">
+        <i class="fa-solid fa-table-columns text-primary fs-4"></i>
+        <h1 class="h4 mb-0 fw-bold">Kanban Board</h1>
+      </div>
+
+      <button class="btn btn-primary" id="addTaskBtn">
+        <i class="fa-solid fa-plus"></i>
+        Add Task
+      </button>
+    </div>
+  </header>
+
+  <!-- Description -->
+  <section class="container py-4">
+    <div class="bg-white rounded-4 shadow-sm p-4">
+      <h2 class="h5 fw-bold mb-3">
+        Organize Your Workflow
+      </h2>
+
+      <p class="text-secondary mb-0">
+        A clean and responsive kanban board interface to manage tasks,
+        improve productivity, and track project progress efficiently.
+      </p>
+    </div>
+  </section>
+
+  <!-- Advertisement -->
+  <section class="container mb-4">
+    <div class="bg-white border rounded-4 shadow-sm p-4 text-center">
+      <small class="text-uppercase text-secondary">Advertisement</small>
+
+      <div class="mt-3">
+        <i class="fa-solid fa-rectangle-ad fa-3x text-secondary mb-3"></i>
+
+        <p class="text-muted mb-0">
+          Your advertisement banner can be placed here.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kanban Board -->
+  <main class="container flex-grow-1 pb-5">
+    <div class="row g-4">
+
+      <!-- To Do -->
+      <div class="col-12 col-md-4">
+        <div class="bg-white rounded-4 shadow-sm p-3 h-100">
+          <div class="container mb-3">
+            <h3 class="h5 mb-0 fw-bold">
+              <i class="fa-regular fa-circle text-primary"></i>
+              To Do
+            </h3>
+
+            <span class="badge bg-primary-subtle text-primary" id="todoCount">2</span>
+          </div>
+
+          <div class="task-list" id="todo">
+            <div class="card border-0 shadow-sm mb-3 task-card">
+              <div class="card-body">
+                <h4 class="h6 fw-bold">Create landing page</h4>
+                <p class="text-secondary small mb-3">
+                  Design modern homepage layout.
+                </p>
+
+                <button class="btn btn-sm btn-outline-primary move-btn">
+                  Move
+                </button>
+              </div>
+            </div>
+
+            <div class="card border-0 shadow-sm mb-3 task-card">
+              <div class="card-body">
+                <h4 class="h6 fw-bold">Write documentation</h4>
+                <p class="text-secondary small mb-3">
+                  Prepare project guidelines.
+                </p>
+
+                <button class="btn btn-sm btn-outline-primary move-btn">
+                  Move
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- In Progress -->
+      <div class="col-12 col-md-4">
+        <div class="bg-white rounded-4 shadow-sm p-3 h-100">
+          <div class="container mb-3">
+            <h3 class="h5 mb-0 fw-bold">
+              <i class="fa-solid fa-spinner text-warning"></i>
+              In Progress
+            </h3>
+
+            <span class="badge bg-warning-subtle text-warning" id="progressCount">1</span>
+          </div>
+
+          <div class="task-list" id="progress">
+            <div class="card border-0 shadow-sm mb-3 task-card">
+              <div class="card-body">
+                <h4 class="h6 fw-bold">Develop dashboard</h4>
+                <p class="text-secondary small mb-3">
+                  Implement responsive components.
+                </p>
+
+                <button class="btn btn-sm btn-outline-warning move-btn">
+                  Move
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Done -->
+      <div class="col-12 col-md-4">
+        <div class="bg-white rounded-4 shadow-sm p-3 h-100">
+          <div class="container mb-3">
+            <h3 class="h5 mb-0 fw-bold">
+              <i class="fa-solid fa-check text-success"></i>
+              Done
+            </h3>
+
+            <span class="badge bg-success-subtle text-success" id="doneCount">1</span>
+          </div>
+
+          <div class="task-list" id="done">
+            <div class="card border-0 shadow-sm mb-3 task-card">
+              <div class="card-body">
+                <h4 class="h6 fw-bold">Setup Bootstrap</h4>
+                <p class="text-secondary small mb-0">
+                  Bootstrap environment configured.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white border-top py-3 mt-auto">
+    <div class="container text-center">
+      <small class="text-secondary">
+        © 2026 Modern Kanban Board. All rights reserved.
+      </small>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Script -->
+  <script>
+    const moveButtons = document.querySelectorAll(".move-btn");
+
+    moveButtons.forEach(button => {
+      button.addEventListener("click", function () {
+        const card = this.closest(".task-card");
+        const currentColumn = card.parentElement;
+
+        if (currentColumn.id === "todo") {
+          document.getElementById("progress").appendChild(card);
+        } else if (currentColumn.id === "progress") {
+          document.getElementById("done").appendChild(card);
+          this.remove();
+        }
+
+        updateCounts();
+      });
+    });
+
+    function updateCounts() {
+      document.getElementById("todoCount").textContent =
+        document.querySelectorAll("#todo .task-card").length;
+
+      document.getElementById("progressCount").textContent =
+        document.querySelectorAll("#progress .task-card").length;
+
+      document.getElementById("doneCount").textContent =
+        document.querySelectorAll("#done .task-card").length;
+    }
+
+    document.getElementById("addTaskBtn").addEventListener("click", function () {
+      const taskTitle = prompt("Enter task title:");
+
+      if (taskTitle && taskTitle.trim() !== "") {
+        const task = document.createElement("div");
+
+        task.className = "card border-0 shadow-sm mb-3 task-card";
+
+        task.innerHTML = `
+          <div class="card-body">
+            <h4 class="h6 fw-bold">${taskTitle}</h4>
+            <p class="text-secondary small mb-3">
+              Newly created task.
+            </p>
+
+            <button class="btn btn-sm btn-outline-primary move-btn">
+              Move
+            </button>
+          </div>
+        `;
+
+        document.getElementById("todo").appendChild(task);
+
+        task.querySelector(".move-btn").addEventListener("click", function () {
+          const card = this.closest(".task-card");
+          const currentColumn = card.parentElement;
+
+          if (currentColumn.id === "todo") {
+            document.getElementById("progress").appendChild(card);
+          } else if (currentColumn.id === "progress") {
+            document.getElementById("done").appendChild(card);
+            this.remove();
+          }
+
+          updateCounts();
+        });
+
+        updateCounts();
+      }
+    });
+
+    updateCounts();
+  </script>
+
+</body>
+</html>

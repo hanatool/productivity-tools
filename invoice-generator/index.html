@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no' name='viewport' />
+
+    <title>Invoice Generator</title>
+
+    <meta name="description" content="Modern responsive invoice generator built with Bootstrap. Create professional invoices easily." />
+    <meta name="keywords" content="invoice generator, bootstrap invoice, invoice maker, billing app" />
+    <meta name="author" content="OpenAI" />
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
+</head>
+<body class="bg-light text-dark d-flex flex-column min-vh-100">
+
+    <!-- Header -->
+    <header class="border-bottom bg-white shadow-none sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <div class="d-flex flex-column flex-lg-row align-items-lg-center justify-content-between gap-3">
+                <div>
+                    <h1 class="h3 mb-1 fw-bold">
+                        <i class="fa-solid fa-file-invoice-dollar me-2 text-primary"></i>
+                        Invoice Generator
+                    </h1>
+                    <p class="text-secondary mb-0">
+                        Create professional and modern invoices instantly.
+                    </p>
+                </div>
+
+                <div>
+                    <button class="btn btn-primary" onclick="generateInvoice()">
+                        <i class="fa-solid fa-wand-magic-sparkles me-2"></i>
+                        Generate Invoice
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main -->
+    <main class="flex-grow-1">
+        <div class="container py-5">
+
+            <!-- Description -->
+            <section class="mb-4">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <h2 class="h4 fw-semibold mb-3">
+                            Simple Invoice Creator
+                        </h2>
+
+                        <p class="text-secondary mb-0">
+                            This invoice generator helps freelancers, agencies, and businesses create clean and professional invoices with ease. Fill in your client details, add invoice items, and instantly generate totals automatically.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Advertisement Area -->
+            <section class="mb-4">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body text-center py-5">
+                        <span class="badge bg-secondary mb-3">
+                            Advertisement
+                        </span>
+
+                        <h3 class="h5 mb-2">
+                            Your Ad Banner Here
+                        </h3>
+
+                        <p class="text-secondary mb-0">
+                            970 x 250 Responsive Ad Space
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Invoice Form -->
+            <section>
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body p-4">
+
+                        <div class="row g-4">
+
+                            <div class="col-lg-6">
+                                <label class="form-label fw-semibold">
+                                    Client Name
+                                </label>
+
+                                <input 
+                                    type="text" 
+                                    class="form-control form-control-lg" 
+                                    id="clientName"
+                                    placeholder="Enter client name"
+                                />
+                            </div>
+
+                            <div class="col-lg-6">
+                                <label class="form-label fw-semibold">
+                                    Invoice Number
+                                </label>
+
+                                <input 
+                                    type="text" 
+                                    class="form-control form-control-lg" 
+                                    id="invoiceNumber"
+                                    placeholder="INV-001"
+                                />
+                            </div>
+
+                            <div class="col-lg-4">
+                                <label class="form-label fw-semibold">
+                                    Item Name
+                                </label>
+
+                                <input 
+                                    type="text" 
+                                    class="form-control form-control-lg" 
+                                    id="itemName"
+                                    placeholder="Website Design"
+                                />
+                            </div>
+
+                            <div class="col-lg-2">
+                                <label class="form-label fw-semibold">
+                                    Quantity
+                                </label>
+
+                                <input 
+                                    type="number" 
+                                    class="form-control form-control-lg" 
+                                    id="quantity"
+                                    value="1"
+                                />
+                            </div>
+
+                            <div class="col-lg-3">
+                                <label class="form-label fw-semibold">
+                                    Price
+                                </label>
+
+                                <input 
+                                    type="number" 
+                                    class="form-control form-control-lg" 
+                                    id="price"
+                                    value="0"
+                                />
+                            </div>
+
+                            <div class="col-lg-3 d-grid">
+                                <label class="form-label fw-semibold invisible">
+                                    Add
+                                </label>
+
+                                <button 
+                                    class="btn btn-outline-primary btn-lg"
+                                    onclick="addItem()"
+                                >
+                                    <i class="fa-solid fa-plus me-2"></i>
+                                    Add Item
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <!-- Invoice Table -->
+                        <div class="table-responsive mt-5">
+                            <table class="table align-middle">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>Item</th>
+                                        <th>Qty</th>
+                                        <th>Price</th>
+                                        <th>Total</th>
+                                        <th class="text-end">Action</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody id="invoiceItems">
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Total -->
+                        <div class="d-flex justify-content-end mt-4">
+                            <div class="card border-0 bg-light">
+                                <div class="card-body">
+                                    <h4 class="mb-0">
+                                        Grand Total:
+                                        <span class="text-primary" id="grandTotal">
+                                            $0
+                                        </span>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-top mt-auto">
+        <div class="container py-4">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+                <p class="mb-0 text-secondary">
+                    © 2026 Invoice Generator. All rights reserved.
+                </p>
+
+                <div class="d-flex gap-3">
+                    <a href="#" class="text-secondary text-decoration-none">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+
+                    <a href="#" class="text-secondary text-decoration-none">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+
+                    <a href="#" class="text-secondary text-decoration-none">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script -->
+    <script>
+        let total = 0;
+
+        function addItem() {
+            const itemName = document.getElementById("itemName").value;
+            const quantity = parseFloat(document.getElementById("quantity").value);
+            const price = parseFloat(document.getElementById("price").value);
+
+            if (!itemName || quantity <= 0 || price < 0) {
+                alert("Please fill all fields correctly.");
+                return;
+            }
+
+            const itemTotal = quantity * price;
+            total += itemTotal;
+
+            const table = document.getElementById("invoiceItems");
+
+            const row = document.createElement("tr");
+
+            row.innerHTML = `
+                <td>${itemName}</td>
+                <td>${quantity}</td>
+                <td>$${price.toFixed(2)}</td>
+                <td>$${itemTotal.toFixed(2)}</td>
+                <td class="text-end">
+                    <button class="btn btn-sm btn-danger" onclick="removeItem(this, ${itemTotal})">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                </td>
+            `;
+
+            table.appendChild(row);
+
+            updateTotal();
+
+            document.getElementById("itemName").value = "";
+            document.getElementById("quantity").value = 1;
+            document.getElementById("price").value = 0;
+        }
+
+        function removeItem(button, itemTotal) {
+            button.closest("tr").remove();
+
+            total -= itemTotal;
+
+            updateTotal();
+        }
+
+        function updateTotal() {
+            document.getElementById("grandTotal").innerText = "$" + total.toFixed(2);
+        }
+
+        function generateInvoice() {
+            const clientName = document.getElementById("clientName").value;
+            const invoiceNumber = document.getElementById("invoiceNumber").value;
+
+            if (!clientName || !invoiceNumber) {
+                alert("Please enter client name and invoice number.");
+                return;
+            }
+
+            alert(
+                "Invoice Generated Successfully!\n\n" +
+                "Client: " + clientName + "\n" +
+                "Invoice: " + invoiceNumber + "\n" +
+                "Total: $" + total.toFixed(2)
+            );
+        }
+    </script>
+
+</body>
+</html>
