@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Modern File Link Generator - Generate downloadable file links instantly." />
+    <meta name="keywords" content="file link generator, download link, bootstrap tool, modern web app" />
+    <meta name="author" content="File Link Generator" />
+
+    <title>File Link Generator</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body class="bg-light text-dark d-flex flex-column min-vh-100">
+
+             <header class="bg-white shadow-none sticky-top border-bottom">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container">
+        <a class="navbar-brand fw-bold text-primary" href="#">
+          <i class="fa-solid fa-link text-primary me-2"></i>File Link Generator
+        </a>
+
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarMenu">
+          <ul class="navbar-nav ms-auto me-3">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#generator">Generator</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ads">Ads</a>
+            </li>
+          </ul>
+
+                <button class="btn btn-primary rounded-pill px-4">
+                    <i class="fa-solid fa-bolt me-2"></i>Generate
+                </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+
+
+    <!-- Hero -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <span class="badge bg-primary-subtle text-primary px-3 py-2 rounded-pill mb-3">
+                        Fast & Modern Tool
+                    </span>
+
+                    <h2 class="display-5 fw-bold mb-3">
+                        Create File Download Links Easily
+                    </h2>
+
+                    <p class="lead text-secondary mb-4">
+                        Generate direct file links instantly with a clean and responsive interface.
+                        Simple, modern, and optimized for all devices.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="flex-grow-1">
+        <div class="container pb-5">
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+
+                    <!-- Generator Card -->
+                    <div class="card border-0 shadow-sm rounded-4 mb-4">
+                        <div class="card-body p-4">
+
+                            <h3 class="h5 fw-bold mb-4">
+                                <i class="fa-solid fa-file-arrow-up text-primary me-2"></i>
+                                Generate Your File Link
+                            </h3>
+
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold">
+                                    File URL
+                                </label>
+
+                                <input
+                                    type="url"
+                                    id="fileUrl"
+                                    class="form-control form-control-lg rounded-3"
+                                    placeholder="https://example.com/file.zip"
+                                >
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="form-label fw-semibold">
+                                    File Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="fileName"
+                                    class="form-control form-control-lg rounded-3"
+                                    placeholder="My File"
+                                >
+                            </div>
+
+                            <button
+                                class="btn btn-primary btn-lg w-100 rounded-3"
+                                onclick="generateLink()"
+                            >
+                                <i class="fa-solid fa-wand-magic-sparkles me-2"></i>
+                                Generate Link
+                            </button>
+
+                            <!-- Result -->
+                            <div id="resultBox" class="mt-4 d-none">
+                                <label class="form-label fw-semibold">
+                                    Generated HTML
+                                </label>
+
+                                <textarea
+                                    id="generatedCode"
+                                    class="form-control rounded-3"
+                                    rows="5"
+                                    readonly
+                                ></textarea>
+
+                                <button
+                                    class="btn btn-outline-primary mt-3 rounded-3"
+                                    onclick="copyCode()"
+                                >
+                                    <i class="fa-solid fa-copy me-2"></i>
+                                    Copy Code
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Advertisement Area -->
+                    <div class="card border-0 shadow-sm rounded-4">
+                        <div class="card-body text-center p-5">
+
+                            <div class="mb-3">
+                                <i class="fa-solid fa-rectangle-ad text-warning display-5"></i>
+                            </div>
+
+                            <h4 class="fw-bold mb-2">Advertisement Space</h4>
+
+                            <p class="text-secondary mb-0">
+                                You can place banner ads, Google AdSense, or promotional content here.
+                            </p>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-top mt-auto">
+        <div class="container py-4">
+            <div class="text-center text-secondary">
+
+                <div class="mb-2">
+                    <i class="fa-solid fa-link text-primary me-2"></i>
+                    <span class="fw-semibold text-dark">
+                        File Link Generator
+                    </span>
+                </div>
+
+                <p class="mb-0 small">
+                    © 2026 File Link Generator. All rights reserved.
+                </p>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script -->
+    <script>
+        function generateLink() {
+            const fileUrl = document.getElementById('fileUrl').value.trim();
+            const fileName = document.getElementById('fileName').value.trim();
+
+            if (!fileUrl || !fileName) {
+                alert('Please fill in all fields.');
+                return;
+            }
+
+            const code = `<a href="${fileUrl}" download>${fileName}</a>`;
+
+            document.getElementById('generatedCode').value = code;
+            document.getElementById('resultBox').classList.remove('d-none');
+        }
+
+        function copyCode() {
+            const codeBox = document.getElementById('generatedCode');
+
+            codeBox.select();
+            codeBox.setSelectionRange(0, 99999);
+
+            navigator.clipboard.writeText(codeBox.value);
+
+            alert('Code copied successfully!');
+        }
+    </script>
+
+</body>
+</html>

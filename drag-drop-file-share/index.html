@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Modern drag and drop file sharing website template with Bootstrap 5." />
+    <meta name="keywords" content="drag drop, file share, upload, bootstrap 5, modern ui" />
+    <meta name="author" content="OpenAI" />
+
+    <title>DragDrop File Share</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body class="bg-light text-dark">
+
+          <header class="bg-white shadow-none sticky-top border-bottom">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container">
+        <a class="navbar-brand fw-bold text-primary" href="#">
+          <i class="fa-solid fa-cloud-arrow-up text-primary me-2"></i>
+                DragDrop Share
+        </a>
+
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarMenu">
+          <ul class="navbar-nav ms-auto me-3">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#generator">Generator</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ads">Ads</a>
+            </li>
+          </ul>
+
+            <button class="btn btn-primary rounded-pill px-4">
+                Upload Now
+            </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+    <!-- Hero -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+
+                    <span class="badge bg-primary-subtle text-primary mb-3 px-3 py-2">
+                        Fast & Secure File Sharing
+                    </span>
+
+                    <h1 class="display-5 fw-bold mb-3">
+                        Share Files Instantly with Drag & Drop
+                    </h1>
+
+                    <p class="lead text-secondary mb-5">
+                        Upload, manage, and share your files quickly using our modern
+                        drag-and-drop uploader. Simple, responsive, and easy to use on any device.
+                    </p>
+
+                </div>
+            </div>
+
+            <!-- Upload Area -->
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+
+                    <div id="dropArea"
+                         class="bg-white border border-2 border-primary-subtle rounded-4 shadow-sm p-5 text-center">
+
+                        <div class="mb-4">
+                            <i class="fa-solid fa-file-arrow-up fa-4x text-primary"></i>
+                        </div>
+
+                        <h3 class="fw-semibold mb-2">
+                            Drag & Drop Files Here
+                        </h3>
+
+                        <p class="text-secondary mb-4">
+                            or click the button below to browse files
+                        </p>
+
+                        <input type="file" id="fileInput" class="d-none" multiple>
+
+                        <button id="browseBtn" class="btn btn-primary btn-lg rounded-pill px-4">
+                            <i class="fa-solid fa-folder-open me-2"></i>
+                            Browse Files
+                        </button>
+
+                        <div id="fileList" class="mt-4 text-start"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4">
+
+                <div class="col-md-4">
+                    <div class="bg-white p-4 rounded-4 shadow-sm h-100">
+                        <div class="mb-3">
+                            <i class="fa-solid fa-bolt fa-2x text-warning"></i>
+                        </div>
+                        <h5 class="fw-bold">Fast Upload</h5>
+                        <p class="text-secondary mb-0">
+                            Upload files quickly with a smooth and responsive interface.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="bg-white p-4 rounded-4 shadow-sm h-100">
+                        <div class="mb-3">
+                            <i class="fa-solid fa-lock fa-2x text-success"></i>
+                        </div>
+                        <h5 class="fw-bold">Secure Sharing</h5>
+                        <p class="text-secondary mb-0">
+                            Keep your files protected with safe and reliable sharing tools.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="bg-white p-4 rounded-4 shadow-sm h-100">
+                        <div class="mb-3">
+                            <i class="fa-solid fa-mobile-screen fa-2x text-primary"></i>
+                        </div>
+                        <h5 class="fw-bold">Responsive Design</h5>
+                        <p class="text-secondary mb-0">
+                            Optimized for desktop, tablet, and mobile devices.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Advertisement -->
+    <section class="pb-5">
+        <div class="container">
+            <div class="bg-white rounded-4 shadow-sm p-5 text-center border">
+
+                <span class="badge bg-secondary mb-3">
+                    Advertisement Space
+                </span>
+
+                <h4 class="fw-bold mb-3">
+                    Your Ads Can Appear Here
+                </h4>
+
+                <p class="text-secondary mb-0">
+                    Perfect area for banners, promotions, Google Ads, or sponsored content.
+                </p>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-top py-4">
+        <div class="container text-center">
+
+            <div class="mb-2">
+                <a href="#" class="text-decoration-none text-secondary mx-2">
+                    Home
+                </a>
+
+                <a href="#" class="text-decoration-none text-secondary mx-2">
+                    Features
+                </a>
+
+                <a href="#" class="text-decoration-none text-secondary mx-2">
+                    Privacy
+                </a>
+
+                <a href="#" class="text-decoration-none text-secondary mx-2">
+                    Contact
+                </a>
+            </div>
+
+            <small class="text-secondary">
+                © 2026 DragDrop Share. All rights reserved.
+            </small>
+
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script -->
+    <script>
+        const dropArea = document.getElementById('dropArea');
+        const fileInput = document.getElementById('fileInput');
+        const browseBtn = document.getElementById('browseBtn');
+        const fileList = document.getElementById('fileList');
+
+        browseBtn.addEventListener('click', () => {
+            fileInput.click();
+        });
+
+        fileInput.addEventListener('change', () => {
+            displayFiles(fileInput.files);
+        });
+
+        ['dragenter', 'dragover'].forEach(eventName => {
+            dropArea.addEventListener(eventName, (e) => {
+                e.preventDefault();
+                dropArea.classList.add('border-primary', 'bg-primary-subtle');
+            });
+        });
+
+        ['dragleave', 'drop'].forEach(eventName => {
+            dropArea.addEventListener(eventName, (e) => {
+                e.preventDefault();
+                dropArea.classList.remove('border-primary', 'bg-primary-subtle');
+            });
+        });
+
+        dropArea.addEventListener('drop', (e) => {
+            const files = e.dataTransfer.files;
+            displayFiles(files);
+        });
+
+        function displayFiles(files) {
+            fileList.innerHTML = '';
+
+            if (files.length === 0) {
+                fileList.innerHTML = '<p class="text-danger">No files selected.</p>';
+                return;
+            }
+
+            const listGroup = document.createElement('div');
+            listGroup.className = 'list-group';
+
+            Array.from(files).forEach(file => {
+                const item = document.createElement('div');
+
+                item.className =
+                    'list-group-item d-flex justify-content-between align-items-center';
+
+                item.innerHTML = `
+                    <div>
+                        <i class="fa-solid fa-file me-2 text-primary"></i>
+                        ${file.name}
+                    </div>
+
+                    <span class="badge bg-primary rounded-pill">
+                        ${(file.size / 1024).toFixed(1)} KB
+                    </span>
+                `;
+
+                listGroup.appendChild(item);
+            });
+
+            fileList.appendChild(listGroup);
+        }
+    </script>
+
+</body>
+</html>
