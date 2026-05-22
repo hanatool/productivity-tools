@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,41 +16,42 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
+
 <body class="bg-light text-dark">
 
-          <header class="bg-white shadow-none sticky-top border-bottom">
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <div class="container">
-        <a class="navbar-brand fw-bold text-primary" href="#">
-          <i class="fa-solid fa-cloud-arrow-up text-primary me-2"></i>
-                DragDrop Share
-        </a>
+    <header class="bg-white shadow-none sticky-top border-bottom">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="#">
+                    <i class="fa-solid fa-cloud-arrow-up text-primary me-2"></i>
+                    DragDrop Share
+                </a>
 
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-        <div class="collapse navbar-collapse" id="navbarMenu">
-          <ul class="navbar-nav ms-auto me-3">
-            <li class="nav-item">
-              <a class="nav-link active" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#generator">Generator</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#ads">Ads</a>
-            </li>
-          </ul>
+                <div class="collapse navbar-collapse" id="navbarMenu">
+                    <ul class="navbar-nav ms-auto me-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#generator">Generator</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#ads">Ads</a>
+                        </li>
+                    </ul>
 
-            <button class="btn btn-primary rounded-pill px-4">
-                Upload Now
-            </button>
-        </div>
-      </div>
-    </nav>
-  </header>
+                    <button class="btn btn-primary rounded-pill px-4">
+                        Upload Now
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
 
 
     <!-- Hero -->
@@ -79,7 +81,7 @@
                 <div class="col-lg-8">
 
                     <div id="dropArea"
-                         class="bg-white border border-2 border-primary-subtle rounded-4 shadow-sm p-5 text-center">
+                        class="bg-white border border-2 border-primary-subtle rounded-4 shadow-sm p-5 text-center">
 
                         <div class="mb-4">
                             <i class="fa-solid fa-file-arrow-up fa-4x text-primary"></i>
@@ -197,7 +199,10 @@
             </div>
 
             <small class="text-secondary">
-                © 2026 DragDrop Share. All rights reserved.
+                © <script type='text/javascript'>
+                    var creditsyear = new Date();
+                    document.write(creditsyear.getFullYear());
+                </script> DragDrop Share. All rights reserved.
             </small>
 
         </div>
@@ -276,4 +281,5 @@
     </script>
 
 </body>
+
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,16 +14,17 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 
 </head>
-<body class="bg-light text-dark d-flex flex-column min-vh-100">
+
+<body class="bg-light text-dark">
 
   <!-- Header -->
   <header class="bg-white border-bottom shadow-none sticky-top">
     <nav class="navbar navbar-expand-lg navbar-light container">
-      <a class="navbar-brand fw-bold text-primary" href="#">
-        <i class="fa-solid fa-note-sticky me-2"></i>Notes Saver
+      <a class="navbar-brand fw-bold" href="#">
+        <i class="fa-solid fa-note-sticky text-primary me-2"></i>Notes Saver
       </a>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
@@ -75,19 +77,10 @@
               <i class="fa-solid fa-pen me-2 text-primary"></i>Quick Note
             </h5>
 
-            <input 
-              type="text" 
-              id="noteTitle"
-              class="form-control mb-3" 
-              placeholder="Note title"
-            >
+            <input type="text" id="noteTitle" class="form-control mb-3" placeholder="Note title">
 
-            <textarea 
-              id="noteContent"
-              class="form-control mb-3" 
-              rows="5" 
-              placeholder="Write your note here..."
-            ></textarea>
+            <textarea id="noteContent" class="form-control mb-3" rows="5"
+              placeholder="Write your note here..."></textarea>
 
             <button class="btn btn-primary w-100" onclick="saveNote()">
               <i class="fa-solid fa-floppy-disk me-2"></i>Save Note
@@ -197,7 +190,10 @@
       </p>
 
       <p class="text-secondary small mb-0">
-        © 2026 All Rights Reserved.
+        © <script type='text/javascript'>
+          var creditsyear = new Date();
+          document.write(creditsyear.getFullYear());
+        </script> All Rights Reserved.
       </p>
     </div>
   </footer>
@@ -296,4 +292,5 @@
   </script>
 
 </body>
+
 </html>

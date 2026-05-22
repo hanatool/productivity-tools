@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
-    <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no' name='viewport' />
+    <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no'
+        name='viewport' />
     <meta name="description" content="Create professional resumes easily with this modern Resume Builder." />
     <meta name="keywords" content="resume builder, cv maker, professional resume, bootstrap resume app" />
     <meta name="author" content="OpenAI" />
@@ -18,7 +20,8 @@
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="bg-light" style="font-family: 'Inter', sans-serif;">
+
+<body class="bg-light text-dark">
 
     <!-- Header -->
     <header class="bg-white border-bottom sticky-top">
@@ -136,27 +139,32 @@
 
                             <div class="mb-3">
                                 <label class="form-label">Full Name</label>
-                                <input type="text" id="nameInput" class="form-control form-control-lg" placeholder="John Doe">
+                                <input type="text" id="nameInput" class="form-control form-control-lg"
+                                    placeholder="John Doe">
                             </div>
 
                             <div class="mb-3">
                                 <label class="form-label">Job Title</label>
-                                <input type="text" id="jobInput" class="form-control form-control-lg" placeholder="Frontend Developer">
+                                <input type="text" id="jobInput" class="form-control form-control-lg"
+                                    placeholder="Frontend Developer">
                             </div>
 
                             <div class="mb-3">
                                 <label class="form-label">Email</label>
-                                <input type="email" id="emailInput" class="form-control form-control-lg" placeholder="john@example.com">
+                                <input type="email" id="emailInput" class="form-control form-control-lg"
+                                    placeholder="john@example.com">
                             </div>
 
                             <div class="mb-3">
                                 <label class="form-label">Phone</label>
-                                <input type="text" id="phoneInput" class="form-control form-control-lg" placeholder="+1 234 567 890">
+                                <input type="text" id="phoneInput" class="form-control form-control-lg"
+                                    placeholder="+1 234 567 890">
                             </div>
 
                             <div class="mb-3">
                                 <label class="form-label">About You</label>
-                                <textarea id="aboutInput" rows="5" class="form-control" placeholder="Write a short professional summary..."></textarea>
+                                <textarea id="aboutInput" rows="5" class="form-control"
+                                    placeholder="Write a short professional summary..."></textarea>
                             </div>
 
                             <button class="btn btn-primary w-100 btn-lg" id="generateBtn">
@@ -225,7 +233,8 @@
     <!-- Footer -->
     <footer class="bg-white border-top py-4">
         <div class="container">
-            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center text-center text-md-start">
+            <div
+                class="d-flex flex-column flex-md-row justify-content-between align-items-center text-center text-md-start">
                 <div class="mb-3 mb-md-0">
                     <strong>Resume Builder</strong>
                     <div class="text-muted small">
@@ -234,7 +243,10 @@
                 </div>
 
                 <div class="text-muted small">
-                    © 2026 Resume Builder. All rights reserved.
+                    © <script type='text/javascript'>
+                        var creditsyear = new Date();
+                        document.write(creditsyear.getFullYear());
+                    </script> Resume Builder. All rights reserved.
                 </div>
             </div>
         </div>
@@ -273,4 +285,5 @@
     </script>
 
 </body>
+
 </html>

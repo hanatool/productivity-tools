@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,14 +16,15 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
+
 <body class="bg-light d-flex flex-column min-vh-100">
 
   <!-- Header -->
   <header class="bg-white shadow-none sticky-top border-bottom">
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container">
-        <a class="navbar-brand fw-bold text-primary" href="#">
-          <i class="fa-solid fa-file-signature me-2"></i>
+        <a class="navbar-brand fw-bold" href="#">
+          <i class="fa-solid fa-file-signature text-primary me-2"></i>
           Cover Letter Generator
         </a>
 
@@ -94,7 +96,8 @@
 
                 <div class="mb-3">
                   <label class="form-label">Position</label>
-                  <input type="text" class="form-control form-control-lg" id="position" placeholder="Frontend Developer">
+                  <input type="text" class="form-control form-control-lg" id="position"
+                    placeholder="Frontend Developer">
                 </div>
 
                 <div class="mb-3">
@@ -186,7 +189,7 @@
     const form = document.getElementById('coverForm');
     const result = document.getElementById('result');
 
-    form.addEventListener('submit', function(e) {
+    form.addEventListener('submit', function (e) {
       e.preventDefault();
 
       const name = document.getElementById('name').value;
@@ -236,4 +239,5 @@
   </script>
 
 </body>
+
 </html>
