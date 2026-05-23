@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+
+  <channel>
+
+    <title>Hanapha Productivity Tools</title>
+    <link>https://tools.hanapha.com/productivity-tools</link>
+
+    <description>
+      Free online productivity tools for planning, note-taking, file sharing, task management, resume building, invoicing, and daily workflow organization.
+    </description>
+
+    <language>en-us</language>
+
+    <item>
+      <title>Clipboard History</title>
+      <link>https://tools.hanapha.com/productivity-tools/clipboard-history</link>
+      <description>
+        Save and manage clipboard history directly in your browser.
+      </description>
+    </item>
+
+    <item>
+      <title>Cover Letter Generator</title>
+      <link>https://tools.hanapha.com/productivity-tools/cover-letter-generator</link>
+      <description>
+        Generate professional cover letters quickly online.
+      </description>
+    </item>
+
+    <item>
+      <title>Daily Planner</title>
+      <link>https://tools.hanapha.com/productivity-tools/daily-planner</link>
+      <description>
+        Organize daily schedules, goals, and tasks efficiently.
+      </description>
+    </item>
+
+    <item>
+      <title>Drag Drop File Share</title>
+      <link>https://tools.hanapha.com/productivity-tools/drag-drop-file-share</link>
+      <description>
+        Share files easily with drag-and-drop functionality online.
+      </description>
+    </item>
+
+    <item>
+      <title>File Link Generator</title>
+      <link>https://tools.hanapha.com/productivity-tools/file-link-generator</link>
+      <description>
+        Generate direct sharing links for files instantly.
+      </description>
+    </item>
+
+    <item>
+      <title>Habit Tracker</title>
+      <link>https://tools.hanapha.com/productivity-tools/habit-tracker</link>
+      <description>
+        Track habits and build productive daily routines online.
+      </description>
+    </item>
+
+    <item>
+      <title>Invoice Generator</title>
+      <link>https://tools.hanapha.com/productivity-tools/invoice-generator</link>
+      <description>
+        Create professional invoices quickly and easily online.
+      </description>
+    </item>
+
+    <item>
+      <title>Kanban Board</title>
+      <link>https://tools.hanapha.com/productivity-tools/kanban-board</link>
+      <description>
+        Manage projects and workflows with a digital Kanban board.
+      </description>
+    </item>
+
+    <item>
+      <title>Notes App</title>
+      <link>https://tools.hanapha.com/productivity-tools/notes-app</link>
+      <description>
+        Write, organize, and manage notes directly in your browser.
+      </description>
+    </item>
+
+    <item>
+      <title>Notes Saver</title>
+      <link>https://tools.hanapha.com/productivity-tools/notes-saver</link>
+      <description>
+        Save and store notes securely online for quick access.
+      </description>
+    </item>
+
+    <item>
+      <title>Resume Builder</title>
+      <link>https://tools.hanapha.com/productivity-tools/resume-builder</link>
+      <description>
+        Build professional resumes and CVs online instantly.
+      </description>
+    </item>
+
+    <item>
+      <title>Temporary File Hosting</title>
+      <link>https://tools.hanapha.com/productivity-tools/temporary-file-hosting</link>
+      <description>
+        Upload and share files temporarily with secure links.
+      </description>
+    </item>
+
+    <item>
+      <title>To Do List</title>
+      <link>https://tools.hanapha.com/productivity-tools/to-do-list</link>
+      <description>
+        Create and manage daily task lists online easily.
+      </description>
+    </item>
+
+  </channel>
+
+</rss>
